@@ -32,8 +32,8 @@ int main() {
 
     time_t savedTime = time(NULL);
     //cout << "Seconds elapsed: " << savedTime << endl;
-    //int oneHour = 60 * 60;
-    int oneHour = 5 * 1; //for testing
+    int oneHour = 60 * 60;
+    //int oneHour = 5 * 1; //for testing
 
     //set console title
     tm* getDate = localtime(&savedTime);
@@ -62,7 +62,7 @@ int main() {
     string appName = "UBA Awareness App --- Date: ";
     appName.append(finalDatePrint);
     SetConsoleTitle(appName.c_str());
-    system("pause");
+    //system("pause");
 
     while (true) {
         time_t currentTime = time(NULL);
