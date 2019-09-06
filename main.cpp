@@ -80,8 +80,10 @@ int main() {
 
             //play resource - must compile resource
             PlaySound(MAKEINTRESOURCE(IDR_SOUND),GetModuleHandle(NULL),
-                SND_RESOURCE | SND_ASYNC
+                SND_RESOURCE | SND_SYNC
             );
+
+            Sleep(7000);
         }
     }
 
