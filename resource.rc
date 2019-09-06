@@ -1,0 +1,4 @@
+#include "resource.h"
+
+IDR_SOUND         WAVE          "sounds/police.wav"
+IDI_ICON          ICON          "icons/desk.ico"

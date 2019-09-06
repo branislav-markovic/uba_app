@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1567711082 source:c:\users\bane\desktop\fakultet\ii godina\ii semestar\c++\programi\uba\main.cpp
+	<iostream>
+	<ctime>
+	<windows.h>
+	<mmsystem.h>
+	<fstream>
+	"resource.h"
+
+1566672148 c:\users\bane\desktop\fakultet\ii godina\ii semestar\c++\programi\uba\resource.h
+
+1566672557 source:c:\users\bane\desktop\fakultet\ii godina\ii semestar\c++\programi\uba\resource.rc
+	"resource.h"
+
