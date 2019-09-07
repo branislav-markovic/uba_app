@@ -28,7 +28,13 @@ int main() {
     //end resource test
     */
 
+    //set bg color
+    system("color 75");
 
+    //set text color
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 39);
+
+    //cout << "Test color" << endl;
 
     time_t savedTime = time(NULL);
     //cout << "Seconds elapsed: " << savedTime << endl;
