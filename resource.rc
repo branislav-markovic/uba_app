@@ -1,4 +1,11 @@
 #include "resource.h"
 
-IDR_SOUND         WAVE          "sounds/police.wav"
+IDR_SOUND         WAVE          "sounds/alarm_alert.wav"
+IDR_SOUND2        WAVE          "sounds/bird_song.wav"
+IDR_SOUND3        WAVE          "sounds/church_bell.wav"
+IDR_SOUND4        WAVE          "sounds/countdown.wav"
+IDR_SOUND5        WAVE          "sounds/crickets_night_sound.wav"
+IDR_SOUND6        WAVE          "sounds/finger_snapping.wav"
+IDR_SOUND7        WAVE          "sounds/pool_shot.wav"
+
 IDI_ICON          ICON          "icons/desk.ico"

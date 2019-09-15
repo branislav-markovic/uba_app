@@ -12,7 +12,7 @@
 1566672557 source:c:\users\bane\desktop\fakultet\ii godina\ii semestar\c++\programi\uba\resource.rc
 	"resource.h"
 
-1567793542 source:c:\xampp\htdocs\programiranje\c++\uba\main.cpp
+1568564328 source:c:\xampp\htdocs\programiranje\c++\uba\main.cpp
 	<iostream>
 	<ctime>
 	<windows.h>
@@ -20,8 +20,8 @@
 	<fstream>
 	"resource.h"
 
-1567874010 c:\xampp\htdocs\programiranje\c++\uba\resource.h
+1567973584 c:\xampp\htdocs\programiranje\c++\uba\resource.h
 
-1567874005 source:c:\xampp\htdocs\programiranje\c++\uba\resource.rc
+1567973670 source:c:\xampp\htdocs\programiranje\c++\uba\resource.rc
 	"resource.h"
 

@@ -1,7 +1,11 @@
 /**
-UBA Awareness App
-Version 1.0
-Author Branislav
+
+- UBA Awareness App
+- Version: 1.1
+- Author: Branislav
+- GitHub repo: https://github.com/branislav-markovic/uba_app
+- GitHub site: https://branislav-markovic.github.io/
+
 */
 
 #include <iostream>
@@ -70,11 +74,65 @@ int main() {
     SetConsoleTitle(appName.c_str());
     //system("pause");
 
-    while (true) {
+    //LPCTSTR selectedSong = IDR_SOUND;
+
+    //select alert song
+    //while loop here
+
+    int selectedSong = false;
+
+    do {
+        cout << "Please select alert tone: " << endl << "1 - Alarm alert" << endl
+         << "2 - Bird song" << endl
+         << "3 - Church bell" << endl
+         << "4 - Countdown" << endl
+         << "5 - Crickets at night" << endl
+         << "6 - Finger snapping" << endl
+         << "7 - Pool shot" << endl
+         << "Enter your tone: (only numbers, for example 1) : ";
+
+        string userChoice;
+        cin >> userChoice;
+
+        try {
+            selectedSong = stoi(userChoice);
+
+            if (!selectedSong) {
+                throw invalid_argument("Invalid syntax.");
+            }
+        } catch(const invalid_argument& err) {
+            selectedSong = false;
+
+            //reset bg and text color
+            system("CLS && color 75");
+            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 39);
+
+            //cout << "Please enter only numbers" << endl;
+            //cout << "Your error: " << &err << endl;
+        }
+
+    } while (!selectedSong);
+
+
+    //cout << "song: " << selectedSong;
+
+    /*while (!selectedSong) {
+        selectedSong = true;
+    }*/
+
+    int soundLength = 7000;
+    savedTime = time(NULL);
+    //cout << "Ulaz: " <<  savedTime;
+
+    while (true && selectedSong) {
+        system("CLS && color 75");
+        SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 39);
+
         time_t currentTime = time(NULL);
         time_t oneHourMore = savedTime + oneHour;
 
         if (currentTime >= oneHourMore) {
+            //cout << "Izlaz: " << savedTime << endl;
             cout << "Take a break...." << endl;
             savedTime = time(NULL);
             //Beep(523,500); // beep sound
@@ -85,11 +143,11 @@ int main() {
             //PlaySound(TEXT("police.wav"), NULL, SND_ASYNC);
 
             //play resource - must compile resource
-            PlaySound(MAKEINTRESOURCE(IDR_SOUND),GetModuleHandle(NULL),
+            PlaySound(MAKEINTRESOURCE(selectedSong),GetModuleHandle(NULL),
                 SND_RESOURCE | SND_SYNC
             );
 
-            Sleep(7000);
+            Sleep(soundLength);
         }
     }
 
